@@ -177,7 +177,7 @@ export default function Home() {
           <div>
 
             <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-              01 / WHOAMI
+              01 / WHO AM I
             </p>
 
 
@@ -187,8 +187,7 @@ export default function Home() {
 
 
             <p className="mt-6 max-w-xl leading-7 text-slate-400">
-              I enjoy building practical systems, exploring data and
-              experimenting with technology to solve real-world problems.
+              I enjoy exploring data, uncovering meaningful patterns, and experimenting with machine learning to turn real-world problems into practical solutions.
             </p>
 
           </div>
@@ -197,11 +196,11 @@ export default function Home() {
           <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 font-mono text-sm leading-8 shadow-2xl shadow-blue-500/5">
 
             <div>
-              <span className="text-blue-300">$</span> whoami
+              <span className="text-blue-300">$</span> who am I
             </div>
 
             <div className="mt-2 text-white">
-              Joe Rettob
+              Joe Fauzsanno Rettob
             </div>
 
             <div className="mt-4 text-slate-500">
@@ -209,15 +208,15 @@ export default function Home() {
             </div>
 
             <div>
-              → Web Developer
-            </div>
-
-            <div>
-              → Data Analyst
-            </div>
-
-            <div>
               → ML Enthusiast
+            </div>
+
+            <div>
+              → Data Scientist
+            </div>
+
+            <div>
+              → Front-End Web Developer
             </div>
 
             <div className="mt-4 text-slate-500">
@@ -225,7 +224,7 @@ export default function Home() {
             </div>
 
             <div>
-              → Build useful systems
+              → Learn by shipping
             </div>
 
             <div>
@@ -233,7 +232,7 @@ export default function Home() {
             </div>
 
             <div>
-              → Learn by shipping
+              → Build useful systems
             </div>
 
           </div>
@@ -253,7 +252,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
 
           <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-            02 / SELECTED WORK
+            02 / All PROJECTS
           </p>
 
 
@@ -264,7 +263,7 @@ export default function Home() {
 
           <p className="mt-4 max-w-2xl leading-7 text-slate-400">
             A selection of projects that demonstrate my experience with
-            programming, data analysis, databases and machine learning.
+            programming machine learning, data science, and front-end web development.
           </p>
 
 
