@@ -62,13 +62,13 @@ export default function Home() {
             href="#top"
             className="font-mono text-sm font-bold tracking-widest"
           >
-            JOE<span className="text-blue-400">.</span>LAB
+            JFR<span className="text-blue-400"></span>
           </a>
 
           <div className="hidden gap-6 text-sm text-slate-400 sm:flex">
 
             <a href="#work" className="transition hover:text-white">
-              WORK
+              PROJECTS
             </a>
 
             <a href="#lab" className="transition hover:text-white">
@@ -105,8 +105,7 @@ export default function Home() {
             <div className="mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.28em] text-blue-300">
 
               <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
-
-              digital laboratory / 2026
+                <span>JOE FAUZSANNO RETTOB</span>
 
             </div>
 
@@ -130,7 +129,7 @@ export default function Home() {
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
 
-              Web developer, data analyst and machine learning enthusiast.
+              Web Developer, Data Scientist and Machine Learning Enthusiast.
               I turn problems, data and ideas into practical digital
               products.
 
@@ -141,11 +140,11 @@ export default function Home() {
 
               <a
                 href="#work"
-                className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-black transition hover:scale-105"
+                className="inline-flex items-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
               >
-                Explore my work
+                <span className="text-black">Explore my work</span>
 
-                <ArrowUpRight className="ml-1 inline h-4 w-4" />
+                <ArrowUpRight className="ml-1 h-4 w-4 text-black" />
 
               </a>
 
