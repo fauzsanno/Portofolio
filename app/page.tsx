@@ -1,5 +1,4 @@
 'use client';
-
 import {
   ArrowUpRight,
   Mail,
@@ -8,10 +7,13 @@ import {
   FolderGit2,
   Brain,
   BarChart3,
+  Menu,
+  X,
 } from 'lucide-react';
 
 
 import Image from "next/image";
+import { useState } from 'react';
 
 const projects = [
   {
@@ -52,44 +54,131 @@ const approaches = [
   ['05', 'DELIVER', 'Turn insights and models into practical solutions.'],
 ];
 
-export default function Home() {
+export default function Home()  {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
+    
     <main className="min-h-screen bg-[#08090b] text-white">
 
       {/* ================= NAVBAR ================= */}
 
-      <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#08090b]/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+<nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#08090b]/80 backdrop-blur-xl">
 
-          <a
-            href="#top"
-            className="font-mono text-sm font-bold tracking-widest"
-          >
-            JFR<span className="text-blue-400"></span>
-          </a>
+  <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
 
-          <div className="hidden gap-6 text-sm text-slate-400 sm:flex">
+    {/* LOGO */}
 
-            <a href="#work" className="transition hover:text-white">
-              PROJECTS
-            </a>
+    <a
+      href="#top"
+      className="font-mono text-sm font-bold tracking-widest"
+      onClick={() => setMobileMenuOpen(false)}
+    >
+      JFR
+    </a>
 
-            <a href="#lab" className="transition hover:text-white">
-              LAB
-            </a>
 
-            <a href="#about" className="transition hover:text-white">
-              ABOUT
-            </a>
+    {/* DESKTOP MENU */}
 
-            <a href="#contact" className="transition hover:text-white">
-              CONTACT
-            </a>
+    <div className="hidden gap-6 text-sm text-slate-400 sm:flex">
 
-          </div>
+      <a
+        href="#work"
+        className="transition hover:text-white"
+      >
+        PROJECTS
+      </a>
 
-        </div>
-      </nav>
+      <a
+        href="#lab"
+        className="transition hover:text-white"
+      >
+        LAB
+      </a>
+
+      <a
+        href="#about"
+        className="transition hover:text-white"
+      >
+        ABOUT
+      </a>
+
+      <a
+        href="#contact"
+        className="transition hover:text-white"
+      >
+        CONTACT
+      </a>
+
+    </div>
+
+
+    {/* MOBILE BUTTON */}
+
+    <button
+      type="button"
+      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-slate-300 transition hover:bg-white/5 sm:hidden"
+      aria-label="Toggle navigation menu"
+    >
+
+      {mobileMenuOpen ? (
+        <X className="h-5 w-5" />
+      ) : (
+        <Menu className="h-5 w-5" />
+      )}
+
+    </button>
+
+  </div>
+
+
+  {/* MOBILE MENU */}
+
+  {mobileMenuOpen && (
+
+    <div className="border-t border-white/5 bg-[#08090b]/95 px-6 py-5 backdrop-blur-xl sm:hidden">
+
+      <div className="flex flex-col gap-5 font-mono text-xs tracking-widest text-slate-400">
+
+        <a
+          href="#work"
+          onClick={() => setMobileMenuOpen(false)}
+          className="transition hover:text-white"
+        >
+          PROJECTS
+        </a>
+
+        <a
+          href="#lab"
+          onClick={() => setMobileMenuOpen(false)}
+          className="transition hover:text-white"
+        >
+          LAB
+        </a>
+
+        <a
+          href="#about"
+          onClick={() => setMobileMenuOpen(false)}
+          className="transition hover:text-white"
+        >
+          ABOUT
+        </a>
+
+        <a
+          href="#contact"
+          onClick={() => setMobileMenuOpen(false)}
+          className="transition hover:text-white"
+        >
+          CONTACT
+        </a>
+
+      </div>
+
+    </div>
+
+  )}
+
+</nav>
 
 
       {/* ================= HERO ================= */}
@@ -119,7 +208,7 @@ export default function Home() {
 
         {/* NAME */}
 
-        <div className="mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.28em] text-blue-300">
+        <div className="mb-6 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.18em] text-blue-300 sm:text-xs sm:tracking-[0.28em]">
 
           <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
 
@@ -132,7 +221,7 @@ export default function Home() {
 
         {/* HEADLINE */}
 
-        <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
+        <h1 className="text-5xl font-semibold leading-[0.92] tracking-tight sm:text-7xl md:text-8xl">
 
           I BUILD.
 
@@ -172,9 +261,9 @@ export default function Home() {
 
           {/* EXPLORE */}
 
-          <a
+         <a
             href="#work"
-            className="inline-flex items-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
+            className="inline-flex items-center justify-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
           >
 
             <span className="text-black">
@@ -188,11 +277,10 @@ export default function Home() {
 
           {/* CONTACT */}
 
-          <a
+         <a
             href="#contact"
-            className="rounded-full border border-white/10 px-5 py-3 text-sm text-slate-300 transition hover:bg-white/5"
+            className="rounded-full border border-white/10 px-5 py-3 text-center text-sm text-slate-300 transition hover:bg-white/5"
           >
-
             Let's connect
 
           </a>
@@ -208,7 +296,7 @@ export default function Home() {
 
       <div className="flex justify-center md:justify-end">
 
-        <div className="relative flex h-[480px] w-[480px] items-center justify-center">
+        <div className="relative flex h-[370px] w-full max-w-[370px] items-center justify-center sm:h-[430px] sm:max-w-[430px] md:h-[480px] md:w-[480px] md:max-w-none">
 
 
           {/* ================================================== */}
@@ -224,17 +312,17 @@ export default function Home() {
 
           {/* Outer Circle */}
 
-          <div className="absolute h-[450px] w-[450px] rounded-full border border-blue-400/10" />
+          <div className="absolute h-[340px] w-[340px] rounded-full border border-blue-400/10 sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]" />
 
 
           {/* Middle Circle */}
 
-          <div className="absolute h-[420px] w-[420px] rounded-full border border-blue-400/20" />
+          <div className="absolute h-[315px] w-[315px] rounded-full border border-blue-400/20 sm:h-[370px] sm:w-[370px] md:h-[420px] md:w-[420px]" />
 
 
           {/* Inner Circle */}
 
-          <div className="absolute h-[390px] w-[390px] rounded-full border border-blue-400/10" />
+          <div className="absolute h-[295px] w-[295px] rounded-full border border-blue-400/10 sm:h-[345px] sm:w-[345px] md:h-[390px] md:w-[390px]" />
 
 
           {/* ================================================== */}
@@ -244,36 +332,47 @@ export default function Home() {
           <div
             className="
               absolute
-              h-[450px]
-              w-[450px]
+              h-[340px]
+              w-[340px]
               rounded-full
               border-t
               border-blue-400/70
               rotate-12
+              sm:h-[400px]
+              sm:w-[400px]
+              md:h-[450px]
+              md:w-[450px]
             "
           />
 
           <div
             className="
               absolute
-              h-[420px]
-              w-[420px]
+              h-[315px]
+              w-[315px]
               rounded-full
               border-r
               border-blue-400/50
               -rotate-12
+              sm:h-[370px]
+              sm:w-[370px]
+              md:h-[420px]
+              md:w-[420px]
             "
           />
-
           <div
             className="
               absolute
-              h-[390px]
-              w-[390px]
+              h-[295px]
+              w-[295px]
               rounded-full
               border-b
               border-blue-400/40
               rotate-45
+              sm:h-[345px]
+              sm:w-[345px]
+              md:h-[390px]
+              md:w-[390px]
             "
           />
 
@@ -287,14 +386,20 @@ export default function Home() {
           <span
             className="
               absolute
-              right-[45px]
-              top-[55px]
+              right-[25px]
+              top-[35px]
               h-3
               w-3
               rounded-full
               bg-blue-400
               shadow-lg
               shadow-blue-400/80
+
+              sm:right-[35px]
+              sm:top-[45px]
+
+              md:right-[45px]
+              md:top-[55px]
             "
           />
 
@@ -304,14 +409,20 @@ export default function Home() {
           <span
             className="
               absolute
-              left-[38px]
-              top-[210px]
+              left-[20px]
+              top-[160px]
               h-2
               w-2
               rounded-full
               bg-blue-300
               shadow-lg
               shadow-blue-300/70
+
+              sm:left-[28px]
+              sm:top-[185px]
+
+              md:left-[38px]
+              md:top-[210px]
             "
           />
 
@@ -321,14 +432,20 @@ export default function Home() {
           <span
             className="
               absolute
-              bottom-[58px]
-              left-[80px]
+              bottom-[40px]
+              left-[55px]
               h-2.5
               w-2.5
               rounded-full
               bg-blue-400
               shadow-lg
               shadow-blue-400/70
+
+              sm:bottom-[50px]
+              sm:left-[68px]
+
+              md:bottom-[58px]
+              md:left-[80px]
             "
           />
 
@@ -338,12 +455,18 @@ export default function Home() {
           <span
             className="
               absolute
-              bottom-[82px]
-              right-[75px]
+              bottom-[58px]
+              right-[50px]
               h-2
               w-2
               rounded-full
               bg-blue-300
+
+              sm:bottom-[70px]
+              sm:right-[62px]
+
+              md:bottom-[82px]
+              md:right-[75px]
             "
           />
 
@@ -352,7 +475,7 @@ export default function Home() {
           {/* ================= PROFILE IMAGE ================= */}
           {/* ================================================== */}
 
-          <div className="relative z-10 h-[330px] w-[330px]">
+          <div className="relative z-10 h-[245px] w-[245px] sm:h-[285px] sm:w-[285px] md:h-[330px] md:w-[330px]">
 
 
             {/* Image Glow */}
