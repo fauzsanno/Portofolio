@@ -6,7 +6,10 @@ import {
   Code2,
   Download,
   FolderGit2,
+  Brain,
+  BarChart3,
 } from 'lucide-react';
+
 
 import Image from "next/image";
 
@@ -95,24 +98,39 @@ export default function Home() {
   id="top"
   className="relative overflow-hidden border-b border-white/5 pt-32"
 >
+
+  {/* ================= BACKGROUND GLOW ================= */}
+
   <div className="pointer-events-none absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl" />
+
+  <div className="pointer-events-none absolute right-0 top-1/2 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+
 
   <div className="relative mx-auto max-w-6xl px-6 pb-28">
 
-    <div className="grid items-center gap-12 md:grid-cols-[1fr_380px]">
+    <div className="grid items-center gap-16 md:grid-cols-[1fr_500px]">
 
-      {/* ================= HERO CONTENT ================= */}
+
+      {/* ================================================== */}
+      {/* ================= HERO CONTENT ================== */}
+      {/* ================================================== */}
 
       <div>
+
+        {/* NAME */}
 
         <div className="mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.28em] text-blue-300">
 
           <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
 
-          <span>JOE FAUZSANNO RETTOB</span>
+          <span>
+            JOE FAUZSANNO RETTOB
+          </span>
 
         </div>
 
+
+        {/* HEADLINE */}
 
         <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
 
@@ -131,17 +149,28 @@ export default function Home() {
         </h1>
 
 
+        {/* DESCRIPTION */}
+
         <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
 
           Data Mining & Machine Learning Enthusiast,
           <br className="hidden sm:block" />
+
           Front-End Developer.
-          I turn problems, data and ideas into practical solutions.
+
+          <br />
+
+          I turn problems, data and ideas into practical
+          digital solutions.
 
         </p>
 
 
+        {/* BUTTONS */}
+
         <div className="mt-9 flex flex-wrap gap-3">
+
+          {/* EXPLORE */}
 
           <a
             href="#work"
@@ -157,6 +186,8 @@ export default function Home() {
           </a>
 
 
+          {/* CONTACT */}
+
           <a
             href="#contact"
             className="rounded-full border border-white/10 px-5 py-3 text-sm text-slate-300 transition hover:bg-white/5"
@@ -171,31 +202,396 @@ export default function Home() {
       </div>
 
 
+      {/* ================================================== */}
       {/* ================= PROFILE IMAGE ================= */}
+      {/* ================================================== */}
 
       <div className="flex justify-center md:justify-end">
 
-        <div className="relative">
-
-          {/* Glow */}
-
-          <div className="absolute -inset-4 rounded-3xl bg-blue-500/10 blur-2xl" />
+        <div className="relative flex h-[480px] w-[480px] items-center justify-center">
 
 
-          {/* Image Frame */}
+          {/* ================================================== */}
+          {/* ================= AMBIENT GLOW =================== */}
+          {/* ================================================== */}
 
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-blue-500/10">
+          <div className="absolute h-80 w-80 rounded-full bg-blue-500/10 blur-3xl" />
 
-            <Image
-              src="/Me5.jpeg"
-              alt="Joe Fauzsanno Rettob"
-              width={380}
-              height={480}
-              priority
-              className="h-[420px] w-[330px] rounded-2xl object-cover grayscale transition duration-500 hover:grayscale-0"
-            />
+
+          {/* ================================================== */}
+          {/* ================= OUTER ORBITS =================== */}
+          {/* ================================================== */}
+
+          {/* Outer Circle */}
+
+          <div className="absolute h-[450px] w-[450px] rounded-full border border-blue-400/10" />
+
+
+          {/* Middle Circle */}
+
+          <div className="absolute h-[420px] w-[420px] rounded-full border border-blue-400/20" />
+
+
+          {/* Inner Circle */}
+
+          <div className="absolute h-[390px] w-[390px] rounded-full border border-blue-400/10" />
+
+
+          {/* ================================================== */}
+          {/* ================= ORBIT ARCS ===================== */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              absolute
+              h-[450px]
+              w-[450px]
+              rounded-full
+              border-t
+              border-blue-400/70
+              rotate-12
+            "
+          />
+
+          <div
+            className="
+              absolute
+              h-[420px]
+              w-[420px]
+              rounded-full
+              border-r
+              border-blue-400/50
+              -rotate-12
+            "
+          />
+
+          <div
+            className="
+              absolute
+              h-[390px]
+              w-[390px]
+              rounded-full
+              border-b
+              border-blue-400/40
+              rotate-45
+            "
+          />
+
+
+          {/* ================================================== */}
+          {/* ================= ORBIT DOTS ===================== */}
+          {/* ================================================== */}
+
+          {/* Top Right */}
+
+          <span
+            className="
+              absolute
+              right-[45px]
+              top-[55px]
+              h-3
+              w-3
+              rounded-full
+              bg-blue-400
+              shadow-lg
+              shadow-blue-400/80
+            "
+          />
+
+
+          {/* Left */}
+
+          <span
+            className="
+              absolute
+              left-[38px]
+              top-[210px]
+              h-2
+              w-2
+              rounded-full
+              bg-blue-300
+              shadow-lg
+              shadow-blue-300/70
+            "
+          />
+
+
+          {/* Bottom Left */}
+
+          <span
+            className="
+              absolute
+              bottom-[58px]
+              left-[80px]
+              h-2.5
+              w-2.5
+              rounded-full
+              bg-blue-400
+              shadow-lg
+              shadow-blue-400/70
+            "
+          />
+
+
+          {/* Bottom Right */}
+
+          <span
+            className="
+              absolute
+              bottom-[82px]
+              right-[75px]
+              h-2
+              w-2
+              rounded-full
+              bg-blue-300
+            "
+          />
+
+
+          {/* ================================================== */}
+          {/* ================= PROFILE IMAGE ================= */}
+          {/* ================================================== */}
+
+          <div className="relative z-10 h-[330px] w-[330px]">
+
+
+            {/* Image Glow */}
+
+            <div className="absolute -inset-4 rounded-full bg-blue-500/20 blur-2xl" />
+
+
+            {/* Blue Image Ring */}
+
+            <div className="absolute -inset-2 rounded-full border border-blue-400/60" />
+
+
+            {/* Image Container */}
+
+            <div className="relative h-full w-full overflow-hidden rounded-full border border-white/10 bg-slate-950 p-2">
+
+              <Image
+                src="/Me6.jpeg"
+                alt="Joe Fauzsanno Rettob"
+                width={500}
+                height={500}
+                priority
+                className="h-full w-full rounded-full object-cover grayscale transition duration-700 hover:grayscale-0"
+              />
+
+            </div>
 
           </div>
+
+
+          {/* ================================================== */}
+          {/* ================= ML & DATA ===================== */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              absolute
+              right-[-20px]
+              top-[25px]
+              z-20
+              hidden
+              rounded-xl
+              border
+              border-blue-400/20
+              bg-slate-950/80
+              px-4
+              py-3
+              shadow-xl
+              shadow-blue-500/5
+              backdrop-blur-md
+              sm:block
+            "
+          >
+
+            <div className="flex items-center gap-3">
+
+
+              {/* Icon */}
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-blue-400/20 bg-blue-400/5">
+
+                <Brain className="h-4 w-4 text-blue-300" />
+
+              </div>
+
+
+              {/* Text */}
+
+              <div>
+
+                <p className="font-mono text-[10px] tracking-widest text-slate-300">
+                  MACHINE LEARNING
+                </p>
+
+                <p className="mt-1 text-[9px] text-slate-500">
+                  Find Patterns, Build Insights
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* ================================================== */}
+          {/* ================= WEB DEVELOPMENT =============== */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              absolute
+              bottom-[15px]
+              left-[-25px]
+              z-20
+              hidden
+              rounded-xl
+              border
+              border-blue-400/20
+              bg-slate-950/80
+              px-4
+              py-3
+              shadow-xl
+              shadow-blue-500/5
+              backdrop-blur-md
+              sm:block
+            "
+          >
+
+            <div className="flex items-center gap-3">
+
+
+              {/* Icon */}
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-blue-400/20 bg-blue-400/5">
+
+                <Code2 className="h-4 w-4 text-blue-300" />
+
+              </div>
+
+
+              {/* Text */}
+
+              <div>
+
+                <p className="font-mono text-[10px] tracking-widest text-slate-300">
+                  FRONT-END
+                </p>
+
+                <p className="mt-1 text-[9px] text-slate-500">
+                  Clean Code, Better UX
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* ================================================== */}
+          {/* ================= DATA ANALYSIS ================= */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              absolute
+              bottom-[30px]
+              right-[-35px]
+              z-20
+              hidden
+              rounded-xl
+              border
+              border-blue-400/20
+              bg-slate-950/80
+              px-4
+              py-3
+              shadow-xl
+              shadow-blue-500/5
+              backdrop-blur-md
+              sm:block
+            "
+          >
+
+            <div className="flex items-center gap-3">
+
+
+              {/* Icon */}
+
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-blue-400/20 bg-blue-400/5">
+
+                <BarChart3 className="h-4 w-4 text-blue-300" />
+
+              </div>
+
+
+              {/* Text */}
+
+              <div>
+
+                <p className="font-mono text-[10px] tracking-widest text-slate-300">
+                  DATA MINING
+                </p>
+
+                <p className="mt-1 text-[9px] text-slate-500">
+                  Discover Patterns in Data
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          {/* ================================================== */}
+          {/* ================= CONNECTOR LINES ================ */}
+          {/* ================================================== */}
+
+          <div
+            className="
+              absolute
+              right-[105px]
+              top-[92px]
+              hidden
+              h-px
+              w-16
+              bg-blue-400/40
+              sm:block
+            "
+          />
+
+
+          <div
+            className="
+              absolute
+              bottom-[70px]
+              left-[105px]
+              hidden
+              h-px
+              w-16
+              bg-blue-400/40
+              sm:block
+            "
+          />
+
+
+          <div
+            className="
+              absolute
+              bottom-[80px]
+              right-[105px]
+              hidden
+              h-px
+              w-12
+              bg-blue-400/30
+              sm:block
+            "
+          />
 
         </div>
 
