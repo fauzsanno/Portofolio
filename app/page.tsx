@@ -8,6 +8,8 @@ import {
   FolderGit2,
 } from 'lucide-react';
 
+import Image from "next/image";
+
 const projects = [
   {
     n: '01',
@@ -33,20 +35,18 @@ const projects = [
 ];
 
 const skills = [
-  ['Python', 'Data analysis / Machine Learning'],
-  ['JavaScript', 'Interactive web development'],
-  ['PHP', 'Backend development'],
+  ['Python', 'Data Mining & Machine Learning'],
+  ['Next.js + TypeScript + React + Tailwind CSS', 'Interactive web development & User interface development'],
+  ['PHP + Laravel', 'Backend development'],
   ['SQL', 'Data & database management'],
-  ['React', 'User interface development'],
-  ['Git', 'Version control'],
 ];
 
 const approaches = [
-  ['01', 'DISCOVER', 'Understand the problem'],
-  ['02', 'ANALYZE', 'Explore the data'],
-  ['03', 'BUILD', 'Develop the solution'],
-  ['04', 'TEST', 'Validate the result'],
-  ['05', 'SHIP', 'Make it usable'],
+  ['01', 'UNDERSTAND', 'Understand the problem, objectives, and available data.'],
+  ['02', 'EXPLORE', 'Explore, clean, and understand the data to uncover meaningful patterns.'],
+  ['03', 'EXPERIMENT', 'Apply data mining techniques and experiment with machine learning models.'],
+  ['04', 'EVALUATE', 'Evaluate results, validate findings, and refine the approach.'],
+  ['05', 'DELIVER', 'Turn insights and models into practical solutions.'],
 ];
 
 export default function Home() {
@@ -91,266 +91,205 @@ export default function Home() {
 
       {/* ================= HERO ================= */}
 
-      <section
-        id="top"
-        className="relative overflow-hidden border-b border-white/5 pt-32"
-      >
+<section
+  id="top"
+  className="relative overflow-hidden border-b border-white/5 pt-32"
+>
+  <div className="pointer-events-none absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl" />
 
-        <div className="pointer-events-none absolute left-1/2 top-20 h-96 w-96 -translate-x-1/2 rounded-full bg-blue-500/10 blur-3xl" />
+  <div className="relative mx-auto max-w-6xl px-6 pb-28">
 
-        <div className="relative mx-auto max-w-6xl px-6 pb-28">
+    <div className="grid items-center gap-12 md:grid-cols-[1fr_380px]">
 
-          <div className="max-w-4xl">
+      {/* ================= HERO CONTENT ================= */}
 
-            <div className="mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.28em] text-blue-300">
+      <div>
 
-              <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
-                <span>JOE FAUZSANNO RETTOB</span>
+        <div className="mb-6 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.28em] text-blue-300">
 
-            </div>
+          <span className="h-2 w-2 animate-pulse rounded-full bg-blue-400" />
 
+          <span>JOE FAUZSANNO RETTOB</span>
 
-            <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
-
-              I BUILD.
-
-              <br />
-
-              <span className="text-slate-500">
-                I ANALYZE.
-              </span>
-
-              <br />
-
-              I SOLVE.
-
-            </h1>
+        </div>
 
 
-            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
+        <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-7xl md:text-8xl">
 
-              Web Developer, Data Scientist and Machine Learning Enthusiast.
-              I turn problems, data and ideas into practical digital
-              products.
+          I BUILD.
 
-            </p>
+          <br />
 
+          <span className="text-slate-500">
+            I ANALYZE.
+          </span>
 
-            <div className="mt-9 flex flex-wrap gap-3">
+          <br />
 
-              <a
-                href="#work"
-                className="inline-flex items-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
-              >
-                <span className="text-black">Explore my work</span>
+          I SOLVE.
 
-                <ArrowUpRight className="ml-1 h-4 w-4 text-black" />
-
-              </a>
+        </h1>
 
 
-              <a
-                href="#contact"
-                className="rounded-full border border-white/10 px-5 py-3 text-sm text-slate-300 transition hover:bg-white/5"
-              >
-                Let's connect
-              </a>
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-400">
 
-            </div>
+          Data Mining & Machine Learning Enthusiast,
+          <br className="hidden sm:block" />
+          Front-End Developer.
+          I turn problems, data and ideas into practical solutions.
+
+        </p>
+
+
+        <div className="mt-9 flex flex-wrap gap-3">
+
+          <a
+            href="#work"
+            className="inline-flex items-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
+          >
+
+            <span className="text-black">
+              Explore my work
+            </span>
+
+            <ArrowUpRight className="ml-1 h-4 w-4 text-black" />
+
+          </a>
+
+
+          <a
+            href="#contact"
+            className="rounded-full border border-white/10 px-5 py-3 text-sm text-slate-300 transition hover:bg-white/5"
+          >
+
+            Let's connect
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+      {/* ================= PROFILE IMAGE ================= */}
+
+      <div className="flex justify-center md:justify-end">
+
+        <div className="relative">
+
+          {/* Glow */}
+
+          <div className="absolute -inset-4 rounded-3xl bg-blue-500/10 blur-2xl" />
+
+
+          {/* Image Frame */}
+
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2 shadow-2xl shadow-blue-500/10">
+
+            <Image
+              src="/Me5.jpeg"
+              alt="Joe Fauzsanno Rettob"
+              width={380}
+              height={480}
+              priority
+              className="h-[420px] w-[330px] rounded-2xl object-cover grayscale transition duration-500 hover:grayscale-0"
+            />
 
           </div>
 
         </div>
 
-      </section>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
       {/* ================= ABOUT ================= */}
 
-      <section
-        id="about"
-        className="mx-auto max-w-6xl px-6 py-24"
-      >
-
-        <div className="grid gap-8 md:grid-cols-2">
-
-          <div>
-
-            <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-              01 / WHO AM I
-            </p>
+<section
+  id="about"
+  className="mx-auto max-w-6xl px-6 py-24"
+>
+  <div className="grid gap-10 md:grid-cols-2 md:items-center">
 
 
-            <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A portfolio that shows the work, not just the words.
-            </h2>
+    {/* ================= ABOUT CONTENT ================= */}
+
+    <div>
+
+      <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
+        01 / WHO AM I
+      </p>
 
 
-            <p className="mt-6 max-w-xl leading-7 text-slate-400">
-              I enjoy exploring data, uncovering meaningful patterns, and experimenting with machine learning to turn real-world problems into practical solutions.
-            </p>
-
-          </div>
+      <h2 className="mt-4 text-4xl font-semibold leading-tight">
+        A portfolio that shows the work, not just the words.
+      </h2>
 
 
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 font-mono text-sm leading-8 shadow-2xl shadow-blue-500/5">
+      <p className="mt-6 max-w-xl leading-7 text-slate-400">
+        I enjoy exploring data, uncovering meaningful patterns, and
+        experimenting with machine learning to turn real-world problems
+        into practical solutions.
+      </p>
 
-            <div>
-              <span className="text-blue-300">$</span> who am I
-            </div>
 
-            <div className="mt-2 text-white">
-              Joe Fauzsanno Rettob
-            </div>
+      {/* ================= TERMINAL CARD ================= */}
 
-            <div className="mt-4 text-slate-500">
-              ROLE
-            </div>
+      <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 font-mono text-sm leading-8 shadow-2xl shadow-blue-500/5">
 
-            <div>
-              → ML Enthusiast
-            </div>
-
-            <div>
-              → Data Scientist
-            </div>
-
-            <div>
-              → Front-End Web Developer
-            </div>
-
-            <div className="mt-4 text-slate-500">
-              FOCUS
-            </div>
-
-            <div>
-              → Learn by shipping
-            </div>
-
-            <div>
-              → Analyze meaningful data
-            </div>
-
-            <div>
-              → Build useful systems
-            </div>
-
-          </div>
-
+        <div>
+          <span className="text-blue-300">$</span> who am I
         </div>
 
-      </section>
-
-
-      {/* ================= PROJECTS ================= */}
-
-      <section
-        id="work"
-        className="border-y border-white/5 bg-[#0a0c10] py-24"
-      >
-
-        <div className="mx-auto max-w-6xl px-6">
-
-          <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-            02 / All PROJECTS
-          </p>
-
-
-          <h2 className="mt-4 text-4xl font-semibold">
-            Projects as evidence.
-          </h2>
-
-
-          <p className="mt-4 max-w-2xl leading-7 text-slate-400">
-            A selection of projects that demonstrate my experience with
-            programming machine learning, data science, and front-end web development.
-          </p>
-
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-
-            {projects.map((project) => (
-
-              <article
-                key={project.n}
-                className="group rounded-2xl border border-white/10 bg-white/[0.02] p-6 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-white/[0.04]"
-              >
-
-                <div className="flex items-center justify-between">
-
-                  <span className="font-mono text-xs text-slate-500">
-                    {project.n}
-                  </span>
-
-                  <ArrowUpRight className="h-5 w-5 text-slate-500 transition group-hover:text-blue-300" />
-
-                </div>
-
-
-                <div className="mt-16 h-32 rounded-xl border border-white/5 bg-black/30 p-4">
-
-                  <div className="font-mono text-[10px] text-slate-500">
-                    PROJECT PREVIEW
-                  </div>
-
-                  <div className="mt-3 h-2 w-4/5 rounded bg-slate-700/70" />
-
-                  <div className="mt-2 h-2 w-3/5 rounded bg-slate-800" />
-
-                  <div className="mt-5 flex gap-2">
-
-                    <span className="h-8 w-8 rounded-lg border border-white/5" />
-
-                    <span className="h-8 w-12 rounded-lg border border-white/5" />
-
-                    <span className="h-8 w-16 rounded-lg border border-white/5" />
-
-                  </div>
-
-                </div>
-
-
-                <h3 className="mt-6 text-xl font-semibold">
-                  {project.title}
-                </h3>
-
-
-                <p className="mt-3 text-sm leading-6 text-slate-400">
-                  {project.desc}
-                </p>
-
-
-                <div className="mt-5 flex flex-wrap gap-2">
-
-                  {project.tags.map((tag) => (
-
-                    <span
-                      key={tag}
-                      className="rounded-full border border-white/10 px-2.5 py-1 text-xs text-slate-400"
-                    >
-                      {tag}
-                    </span>
-
-                  ))}
-
-                </div>
-
-
-                <div className="mt-5 border-t border-white/5 pt-4 font-mono text-xs text-blue-300">
-                  {project.stat}
-                </div>
-
-              </article>
-
-            ))}
-
-          </div>
-
+        <div className="mt-2 text-white">
+          Joe Fauzsanno Rettob
         </div>
 
-      </section>
+        <div className="mt-4 text-slate-500">
+          ROLE
+        </div>
 
+        <div>
+          → ML Enthusiast
+        </div>
 
+        <div>
+          → Data Scientist
+        </div>
+
+        <div>
+          → Front-End Web Developer
+        </div>
+
+        <div className="mt-4 text-slate-500">
+          FOCUS
+        </div>
+
+        <div>
+          → Learn by shipping
+        </div>
+
+        <div>
+          → Analyze meaningful data
+        </div>
+
+        <div>
+          → Build useful systems
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+```
       {/* ================= DIGITAL LAB ================= */}
 
       <section
@@ -363,7 +302,7 @@ export default function Home() {
           <div>
 
             <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-              03 / DIGITAL LAB
+              03 / LAB
             </p>
 
 
@@ -483,7 +422,7 @@ export default function Home() {
           <div>
 
             <div className="font-mono text-xs text-blue-300">
-              $ connect --with Joe
+              $ connect | with JFR
             </div>
 
 
@@ -510,7 +449,7 @@ export default function Home() {
 
               <Mail className="h-4 w-4" />
 
-              your@email.com
+              jorettob@gmail.com
 
             </a>
 
@@ -518,7 +457,7 @@ export default function Home() {
             {/* GITHUB */}
 
             <a
-              href="https://github.com/"
+              href="https://github.com/fauzsanno"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl border border-white/10 px-5 py-3 text-sm transition hover:bg-white/5"
@@ -531,19 +470,20 @@ export default function Home() {
             </a>
 
 
-            {/* DOWNLOAD CV */}
+            {/* view CV */}
 
             <a
-              href="/cv/Joe-Rettob-CV.pdf"
-              download
+              href="https://drive.google.com/file/d/1ZQjZopaEOyDYEVLm-2X6goOSqlBTjL_r/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl border border-white/10 px-5 py-3 text-sm transition hover:bg-white/5"
             >
-
               <Download className="h-4 w-4" />
 
-              Download CV
-
+              View CV
             </a>
+
+
 
           </div>
 
@@ -559,11 +499,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
 
           <span className="font-mono">
-            JOE.LAB © 2026
-          </span>
-
-          <span className="font-mono">
-            BUILT WITH NEXT.JS
+            JFR © 
           </span>
 
         </div>
