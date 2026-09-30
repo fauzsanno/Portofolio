@@ -729,85 +729,98 @@ export default function Home()  {
 
       {/* ================= ABOUT ================= */}
 
-<section
-  id="about"
-  className="mx-auto max-w-6xl px-6 py-24"
->
-  <div className="grid gap-10 md:grid-cols-2 md:items-center">
+      <section
+        id="about"
+        className="mx-auto max-w-6xl px-6 py-24"
+      >
+        <div className="grid gap-12 md:grid-cols-2 md:items-center">
 
 
-    {/* ================= ABOUT CONTENT ================= */}
+          {/* ================= ABOUT CONTENT ================= */}
 
-    <div>
+          <div>
 
-      <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
-        01 / WHO AM I
-      </p>
-
-
-      <h2 className="mt-4 text-4xl font-semibold leading-tight">
-        A portfolio that shows the work, not just the words.
-      </h2>
+            <p className="font-mono text-xs tracking-[0.25em] text-blue-300">
+              01 / WHO AM I
+            </p>
 
 
-      <p className="mt-6 max-w-xl leading-7 text-slate-400">
-        I enjoy exploring data, uncovering meaningful patterns, and
-        experimenting with machine learning to turn real-world problems
-        into practical solutions.
-      </p>
+            <h2 className="mt-4 text-4xl font-semibold leading-tight">
+              A portfolio that shows the work, not just the words.
+            </h2>
 
 
-      {/* ================= TERMINAL CARD ================= */}
+            <p className="mt-6 max-w-xl leading-7 text-slate-400">
+              I enjoy exploring data, uncovering meaningful patterns, and
+              experimenting with machine learning to turn real-world problems
+              into practical solutions.
+            </p>
 
-      <div className="mt-8 rounded-2xl border border-white/10 bg-white/[0.03] p-6 font-mono text-sm leading-8 shadow-2xl shadow-blue-500/5">
+          </div>
 
-        <div>
-          <span className="text-blue-300">$</span> who am I
+
+          {/* ================= TERMINAL CARD ================= */}
+
+          <div
+            className="
+              rounded-2xl
+              border
+              border-white/10
+              bg-white/[0.03]
+              p-6
+              font-mono
+              text-sm
+              leading-8
+              shadow-2xl
+              shadow-blue-500/5
+            "
+          >
+
+            <div>
+              <span className="text-blue-300">$</span> who am I
+            </div>
+
+            <div className="mt-2 text-white">
+              Joe Fauzsanno Rettob
+            </div>
+
+            <div className="mt-4 text-slate-500">
+              ROLE
+            </div>
+
+            <div>
+              → ML Enthusiast
+            </div>
+
+            <div>
+              → Data Scientist
+            </div>
+
+            <div>
+              → Front-End Web Developer
+            </div>
+
+            <div className="mt-4 text-slate-500">
+              FOCUS
+            </div>
+
+            <div>
+              → Learn by shipping
+            </div>
+
+            <div>
+              → Analyze meaningful data
+            </div>
+
+            <div>
+              → Build useful systems
+            </div>
+
+          </div>
+
+
         </div>
-
-        <div className="mt-2 text-white">
-          Joe Fauzsanno Rettob
-        </div>
-
-        <div className="mt-4 text-slate-500">
-          ROLE
-        </div>
-
-        <div>
-          → ML Enthusiast
-        </div>
-
-        <div>
-          → Data Scientist
-        </div>
-
-        <div>
-          → Front-End Web Developer
-        </div>
-
-        <div className="mt-4 text-slate-500">
-          FOCUS
-        </div>
-
-        <div>
-          → Learn by shipping
-        </div>
-
-        <div>
-          → Analyze meaningful data
-        </div>
-
-        <div>
-          → Build useful systems
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+      </section>
 ```
       {/* ================= DIGITAL LAB ================= */}
 
