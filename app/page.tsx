@@ -992,7 +992,7 @@ export default function Home()  {
             {/* view CV */}
 
             <a
-              href="https://drive.google.com/file/d/1ZQjZopaEOyDYEVLm-2X6goOSqlBTjL_r/view?usp=sharing"
+              href="https://drive.google.com/file/d/1VfB1j0edv85Ji237Ll-v-Nzgn-Ahcdee/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 rounded-xl border border-white/10 px-5 py-3 text-sm transition hover:bg-white/5"
