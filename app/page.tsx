@@ -18,10 +18,12 @@ import { useState } from 'react';
 const projects = [
   {
     n: '01',
-    title: 'Network Traffic Analysis',
-    desc: 'Exploring network traffic patterns and comparing conditions before and after MAC Address Filtering.',
-    tags: ['Python', 'Pandas', 'Wireshark'],
-    stat: '242,834 records',
+    title: 'Machine Learning Experiment',
+    desc: 'An experiment for presenting dataset preparation, model training, evaluation and machine learning results.',
+    tags: ['Python', 'Scikit-learn', 'ML'],
+    stat: 'Experiment #001',
+    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY1',
+
   },
   {
     n: '02',
@@ -29,13 +31,15 @@ const projects = [
     desc: 'A practical web application focused on structured data, user flows, database management and a clean interface.',
     tags: ['PHP', 'MySQL', 'JavaScript'],
     stat: 'Full-stack project',
+    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY2',
   },
   {
     n: '03',
-    title: 'Machine Learning Experiment',
-    desc: 'An experiment for presenting dataset preparation, model training, evaluation and machine learning results.',
-    tags: ['Python', 'Scikit-learn', 'ML'],
-    stat: 'Experiment #001',
+    title: 'Network Traffic Analysis',
+    desc: 'Exploring network traffic patterns and comparing conditions before and after MAC Address Filtering.',
+    tags: ['Python', 'Pandas', 'Wireshark'],
+    stat: '242,834 records',
+    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY3',
   },
 ];
 
@@ -82,8 +86,8 @@ export default function Home()  {
     <div className="hidden gap-6 text-sm text-slate-400 sm:flex">
 
       <a
-        href="#work"
-        className="transition hover:text-white"
+        href="#projects"
+        className="text-sm text-slate-400 transition hover:text-white"
       >
         PROJECTS
       </a>
@@ -141,7 +145,7 @@ export default function Home()  {
       <div className="flex flex-col gap-5 font-mono text-xs tracking-widest text-slate-400">
 
         <a
-          href="#work"
+          href="#projects"
           onClick={() => setMobileMenuOpen(false)}
           className="transition hover:text-white"
         >
@@ -262,12 +266,12 @@ export default function Home()  {
           {/* EXPLORE */}
 
          <a
-            href="#work"
+            href="#projects"
             className="inline-flex items-center justify-center rounded-full bg-gray-300 px-5 py-3 text-sm font-semibold text-black transition hover:scale-105 hover:bg-gray-400"
           >
 
             <span className="text-black">
-              Explore my work
+              Explore my projects
             </span>
 
             <ArrowUpRight className="ml-1 h-4 w-4 text-black" />
@@ -727,6 +731,98 @@ export default function Home()  {
 </section>
 
 
+{/* PROJECTS */}
+<section id="projects" className="mx-auto max-w-6xl px-6 py-24">
+  <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+    <div>
+      <p className="mb-3 font-mono text-xs uppercase tracking-[0.3em] text-blue-400">
+        Selected Work
+      </p>
+
+      <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        Projects
+      </h2>
+
+      <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
+        A selection of projects exploring data analysis, machine learning,
+        web development, and practical digital systems.
+      </p>
+    </div>
+
+    <div className="font-mono text-xs uppercase tracking-[0.2em] text-slate-500">
+      03 Projects
+    </div>
+  </div>
+
+  <div className="grid gap-6 lg:grid-cols-2">
+    {projects.map((project) => (
+      <article
+        key={project.n}
+        className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition duration-300 hover:border-blue-400/30 hover:bg-white/[0.05] sm:p-8"
+      >
+        {/* Decorative glow */}
+        <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-blue-500/10 blur-3xl transition duration-500 group-hover:bg-blue-500/20" />
+
+        {/* Project number */}
+        <div className="relative flex items-start justify-between">
+          <span className="font-mono text-xs tracking-[0.2em] text-blue-400">
+            PROJECT / {project.n}
+          </span>
+
+          <FolderGit2 className="h-5 w-5 text-slate-600 transition group-hover:text-blue-400" />
+        </div>
+
+        {/* Title */}
+        <h3 className="relative mt-8 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          {project.title}
+        </h3>
+
+        {/* Description */}
+        <p className="relative mt-4 max-w-xl text-sm leading-7 text-slate-400">
+          {project.desc}
+        </p>
+
+        {/* Tags */}
+        <div className="relative mt-6 flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.12em] text-slate-300"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Bottom information */}
+        <div className="relative mt-8 flex flex-col gap-6 border-t border-white/10 pt-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500">
+              Project Data
+            </p>
+
+            <p className="mt-2 text-sm text-slate-300">
+              {project.stat}
+            </p>
+          </div>
+
+          {/* Repository */}
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-blue-300 transition hover:text-blue-200"
+          >
+            Open Repository
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>
+
+
       {/* ================= ABOUT ================= */}
 
       <section
@@ -821,7 +917,7 @@ export default function Home()  {
 
         </div>
       </section>
-```
+
       {/* ================= DIGITAL LAB ================= */}
 
       <section
