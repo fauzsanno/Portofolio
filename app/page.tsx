@@ -23,23 +23,24 @@ const projects = [
     tags: ['Python', 'hybrid ','XGBoost', 'LightGBM'],
     stat: 'Experiment #001',
     github: 'https://github.com/fauzsanno/hybrid-xgboost-lightgbm-heart-prediction',
+    deploy: 'https://hybrid-xgboost-lightgbm-heart-prediction-n6j49etywmwt48vc58d5h.streamlit.app/',
 
   },
   {
     n: '02',
-    title: 'Web Information System',
-    desc: 'A practical web application focused on structured data, user flows, database management and a clean interface.',
-    tags: ['PHP', 'MySQL', 'JavaScript'],
+    title: 'Portfolio Web Application',
+    desc: 'A practical web application featuring intuitive user flows, responsive UI, and a clean interface.',
+    tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS'],
     stat: 'Full-stack project',
-    github: 'https://github.com/fauzsanno/PerpustakaanAppMVC',
+    github: 'https://github.com/fauzsanno/portofolio',
   },
   {
     n: '03',
-    title: 'Network Traffic Analysis',
-    desc: 'Exploring network traffic patterns and comparing conditions before and after MAC Address Filtering.',
-    tags: ['Python', 'Pandas', 'Wireshark'],
+    title: 'PerpustakaanAppMVC',
+    desc: 'A practical web application focused on structured data, user flows, database management and a clean interface.',
+    tags: ['PHP', 'MySQL', 'javascript', 'Bootstrap'],
     stat: '242,834 records',
-    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY3',
+    github: 'https://github.com/fauzsanno/PerpustakaanAppMVC',
   },
 ];
 
@@ -808,6 +809,15 @@ export default function Home()  {
           </div>
 
           {/* Repository */}
+            <a
+            href={project.deploy}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-medium text-blue-300 transition hover:text-blue-200"
+          >
+            deploy
+            <ArrowUpRight className="h-4 w-4" />
+          </a>
           <a
             href={project.github}
             target="_blank"
