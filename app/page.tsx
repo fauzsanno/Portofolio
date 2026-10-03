@@ -18,11 +18,11 @@ import { useState } from 'react';
 const projects = [
   {
     n: '01',
-    title: 'Machine Learning Experiment',
-    desc: 'An experiment for presenting dataset preparation, model training, evaluation and machine learning results.',
-    tags: ['Python', 'Scikit-learn', 'ML'],
+    title: 'Machine Learning',
+    desc: 'Optimization of Heart Disease Risk Prediction Using a Hybrid Gradient Boosting Method Based on a Combination of XGBoost and LightGBM Models.',
+    tags: ['Python', 'hybrid ','XGBoost', 'LightGBM'],
     stat: 'Experiment #001',
-    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY1',
+    github: 'https://github.com/fauzsanno/hybrid-xgboost-lightgbm-heart-prediction',
 
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     desc: 'A practical web application focused on structured data, user flows, database management and a clean interface.',
     tags: ['PHP', 'MySQL', 'JavaScript'],
     stat: 'Full-stack project',
-    github: 'https://github.com/fauzsanno/NAMA-REPOSITORY2',
+    github: 'https://github.com/fauzsanno/PerpustakaanAppMVC',
   },
   {
     n: '03',
@@ -740,12 +740,13 @@ export default function Home()  {
       </p>
 
       <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-        Projects
+        A portfolio that shows the work, not just the words.
       </h2>
 
       <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-400 sm:text-base">
-        A selection of projects exploring data analysis, machine learning,
-        web development, and practical digital systems.
+        I enjoy exploring data, uncovering meaningful patterns, and
+              experimenting with machine learning to turn real-world problems
+              into practical solutions.
       </p>
     </div>
 
@@ -842,14 +843,11 @@ export default function Home()  {
 
 
             <h2 className="mt-4 text-4xl font-semibold leading-tight">
-              A portfolio that shows the work, not just the words.
+              Joe Fauzsanno Rettob S.Kom
             </h2>
 
-
             <p className="mt-6 max-w-xl leading-7 text-slate-400">
-              I enjoy exploring data, uncovering meaningful patterns, and
-              experimenting with machine learning to turn real-world problems
-              into practical solutions.
+              Recent Informatics graduate from Universitas Amikom Yogyakarta, holding a GPA of 3.49/4.00
             </p>
 
           </div>
@@ -872,13 +870,7 @@ export default function Home()  {
             "
           >
 
-            <div>
-              <span className="text-blue-300">$</span> who am I
-            </div>
-
-            <div className="mt-2 text-white">
-              Joe Fauzsanno Rettob
-            </div>
+    
 
             <div className="mt-4 text-slate-500">
               ROLE
